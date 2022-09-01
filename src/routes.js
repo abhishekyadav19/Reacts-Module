@@ -7,10 +7,10 @@ const Page404 = lazy(() => import('./app/pages/page404/Page404'));
 
 
 const routes = [
-    { path: '/', name: "Main", components: Main },
-    { path: '/test', name: "Test", components: Test },
-    { path: '/tester', name: "Tester", components: Tester },
-    { path: '*', name: "Page404", components: Page404 },
+    { path: '/', name: "Main", component: Main },
+    { path: '/test', name: "Test", component: Test },
+    { path: '/tester', name: "Tester", component: Tester },
+    { path: '*', name: "Page404", component: Page404 },
     
 ]
 

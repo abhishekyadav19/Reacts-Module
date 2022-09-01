@@ -18,7 +18,7 @@ const Content = () => {
           {routes.map((route, i) => {
             console.log(route)
             return (
-              <Route key={route.name} path={route.path} element={<route.components/>} />)
+              <Route key={route.name} path={route.path} element={<route.component/>} />)
           })}
         </Routes>
     </Suspense>

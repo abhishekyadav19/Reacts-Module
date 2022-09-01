@@ -1,13 +1,42 @@
 import React from 'react'
+import { useEffect } from 'react';
+import {useDispatch, useSelector } from 'react-redux';
+import { fetchDataApi } from '../store/actions';
 
 const Main = () => {
+const dispatch=useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchDataApi())
+  }, [])
+
+  const {loading,error,getGalleryData}=useSelector(state=>state.galleryReducer);
+  // console.log(getGalleryData,"test");
+
+
+  if (error) {
+    return <div>Error! {error.message}</div>;
+  }
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div>
-        <h1>
-            homepage
-        </h1>
+    
+        {
+        getGalleryData.map((item, i)=>{
+          return(
+            <>
+            <h1>{item.title}</h1>
+            </>
+          )
+        })
+        }
+      
     </div>
   )
 }
 
-export default Main
+export default (Main)
