@@ -13,7 +13,6 @@ const dispatch=useDispatch()
   const {loading,error,getGalleryData}=useSelector(state=>state.galleryReducer);
   // console.log(getGalleryData,"test");
 
-
   if (error) {
     return <div>Error! {error.message}</div>;
   }
@@ -29,7 +28,7 @@ const dispatch=useDispatch()
         getGalleryData.map((item, i)=>{
           return(
             <>
-            <h1>{item.title}</h1>
+            <h4>{item.title}</h4>
             </>
           )
         })

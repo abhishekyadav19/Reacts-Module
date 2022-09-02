@@ -16,7 +16,6 @@ const Content = () => {
     <Suspense fallback={loading}>
         <Routes>
           {routes.map((route, i) => {
-            console.log(route)
             return (
               <Route key={route.name} path={route.path} element={<route.component/>} />)
           })}

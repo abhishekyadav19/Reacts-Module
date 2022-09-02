@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 
 const Main = lazy(() => import('./app/main'));
-const Test = lazy(() => import('./app/pages/Test'));
-const Tester = lazy(() => import('./app/pages/Tester'));
-const Page404 = lazy(() => import('./app/pages/page404/Page404'));
+const Test = lazy(() => import('./app/authentication/Test'));
+const Tester = lazy(() => import('./app/authentication/Tester'));
+const Page404 = lazy(() => import('./app/authentication/page404/Page404'));
 
 
 const routes = [

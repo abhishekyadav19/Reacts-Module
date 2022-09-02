@@ -1,5 +1,5 @@
-import React, { Component, lazy, Suspense } from 'react'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import React, { lazy, Suspense } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
 const loading = (
@@ -12,9 +12,8 @@ const loading = (
 const DefaultLayout = lazy(() => import('./app/layouts/Layout'))
 
 // Pages
-const Login = lazy(() => import('./app/pages/login/Login'));
-const Register = lazy(() => import('./app/pages/ragister/Ragister'));
-const Page404 = lazy(() => import('./app/pages/page404/Page404'));
+const Login = lazy(() => import('./app/authentication/login/Login'));
+const Register = lazy(() => import('./app/authentication/ragister/Ragister'));
 
 
 const App=()=> {
@@ -23,10 +22,9 @@ const App=()=> {
       <BrowserRouter>
         <Suspense fallback={loading}>
           <Routes>
-            <Route path="/"  element={<DefaultLayout/>} />
+            <Route path="*"  element={<DefaultLayout/>} />
             <Route path="/login" element={ <Login/>} />
             <Route path="/ragister" element={ <Register/>}/>
-            {/* <Route path="*" element={<Page404/>} /> */}
           </Routes>
         </Suspense>
       </BrowserRouter>
