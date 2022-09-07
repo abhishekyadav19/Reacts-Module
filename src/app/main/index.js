@@ -28,6 +28,7 @@ const dispatch=useDispatch()
         getGalleryData.map((item, i)=>{
           return(
             <>
+            <h4>Homepage</h4>
             <h4>{item.title}</h4>
             </>
           )

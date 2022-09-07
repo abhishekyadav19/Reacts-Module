@@ -1,43 +1,39 @@
-import * as actionTypes from '../actions/actionTypes';
+import * as actionTypes from '../actions/actionTypes'
 
 const initialState = {
-    getGalleryData: [],
+    logindata: {},
     loading: false,
     error: null,
 }
 
-const galleryReducer = (state = initialState, action) => {
+const loginReducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.FETHCHING_DATA:
+        case actionTypes.LOGIN_USER_PENDING:
             {
                 return {
                     ...state,
                     loading: true,
-                    error: null
                 }
             }
-        case actionTypes.FETHCING_DATA_SUCCESS:
+        case actionTypes.LOGIN_USER:
             {
                 return {
                     ...state,
                     loading: false,
-                    getGalleryData: action.payload
+                    logindata: action.payload
                 }
             }
-        case actionTypes.FETHCING_DATA_FAILURE:
+        case actionTypes.LOGIN_USER_ERROR:
             {
                 return {
                     ...state,
                     loading: false,
-                    error: action.error,
-                    getGalleryData: [],
-
+                    logindata: {}
                 }
             }
-
         default:
-            return state;
+            return state
     }
 }
 
-export default galleryReducer
+export default loginReducer

@@ -1,0 +1,19 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.button-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.login{
+    width: 30%;
+}
+@media (max-width:767px) {
+    .login{
+        width: 100%;
+    }
+}

@@ -1,43 +1,39 @@
-import * as actionTypes from '../actions/actionTypes';
+import * as actionTypes from '../actions/actionTypes'
 
 const initialState = {
-    getGalleryData: [],
+    ragisterdata: {},
     loading: false,
     error: null,
 }
 
-const galleryReducer = (state = initialState, action) => {
+const ragisterReducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.FETHCHING_DATA:
+        case actionTypes.RAGISTER_USER_PENDING:
             {
                 return {
                     ...state,
                     loading: true,
-                    error: null
                 }
             }
-        case actionTypes.FETHCING_DATA_SUCCESS:
+        case actionTypes.RAGISTER_USER:
             {
                 return {
                     ...state,
                     loading: false,
-                    getGalleryData: action.payload
+                    ragisterdata: action.payload
                 }
             }
-        case actionTypes.FETHCING_DATA_FAILURE:
+        case actionTypes.RAGISTER_USER_ERROR:
             {
                 return {
                     ...state,
                     loading: false,
-                    error: action.error,
-                    getGalleryData: [],
-
+                    ragisterdata: {}
                 }
             }
-
         default:
-            return state;
+            return state
     }
 }
 
-export default galleryReducer
+export default ragisterReducer

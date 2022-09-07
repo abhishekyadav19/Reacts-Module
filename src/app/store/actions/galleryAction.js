@@ -22,6 +22,7 @@ export const fetchDataApi = () => {
     return (dispatch) => {
         dispatch(fetchData());
         axios.get(url).then((res) => {
+            console.log(res,"hsgdhgshf");
             dispatch(fetchDataSuccess(res.data))
         }).catch((error) => {
             dispatch(fetchDataFailure(error))
