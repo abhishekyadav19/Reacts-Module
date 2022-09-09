@@ -52,7 +52,7 @@ const Main = () => {
         <ButtonGroup variant="outlined" aria-label="outlined button group" sx={{display:"flex",flexWrap:"wrap"}}>
           <Link to="/checkboxes"><Button>Checkbox</Button></Link>
           <Link to="/video"><Button>Video Player</Button></Link>
-          <Button>upcoming component</Button>
+          <Link to="/tabs">  <Button>Tabs</Button></Link>
           <Button>upcoming component</Button>
         </ButtonGroup>
 
