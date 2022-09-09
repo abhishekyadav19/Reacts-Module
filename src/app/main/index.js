@@ -1,30 +1,32 @@
+import { Box, Button, ButtonGroup } from '@mui/material';
 import React from 'react'
 import { useEffect } from 'react';
-import {useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import { fetchDataApi } from '../store/actions';
 
 const Main = () => {
-const dispatch=useDispatch()
+  // const dispatch=useDispatch()
 
-  useEffect(() => {
-    dispatch(fetchDataApi())
-  }, [])
+  //   useEffect(() => {
+  //     dispatch(fetchDataApi())
+  //   }, [])
 
-  const {loading,error,getGalleryData}=useSelector(state=>state.galleryReducer);
+  // const {loading,error,getGalleryData}=useSelector(state=>state.galleryReducer);
   // console.log(getGalleryData,"test");
 
-  if (error) {
-    return <div>Error! {error.message}</div>;
-  }
+  // if (error) {
+  //   return <div>Error! {error.message}</div>;
+  // }
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
-    <div>
-    
-        {
+    <>
+
+      {/* {
         getGalleryData.map((item, i)=>{
           return(
             <>
@@ -33,9 +35,29 @@ const dispatch=useDispatch()
             </>
           )
         })
-        }
-      
-    </div>
+        } */}
+
+
+      <Box
+        sx={{
+          display: 'flex',
+          height:'50vh',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '& > *': {
+            m: 1,
+          },
+        }}
+      >
+        <ButtonGroup variant="outlined" aria-label="outlined button group" sx={{display:"flex",flexWrap:"wrap"}}>
+          <Link to="/checkboxes"><Button>Checkbox</Button></Link>
+          <Link to="/video"><Button>Video Player</Button></Link>
+          <Button>upcoming component</Button>
+          <Button>upcoming component</Button>
+        </ButtonGroup>
+
+      </Box>
+    </>
   )
 }
 
