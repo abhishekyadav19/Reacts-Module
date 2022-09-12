@@ -15,7 +15,6 @@ const DefaultLayout = lazy(() => import('./app/layouts/Layout'))
 const Login = lazy(() => import('./app/authentication/login/Login'));
 const Register = lazy(() => import('./app/authentication/ragister/Ragister'));
 
-
 const App=()=> {
   
     return (

@@ -41,7 +41,7 @@ const Main = () => {
       <Box
         sx={{
           display: 'flex',
-          height:'50vh',
+          height: '50vh',
           flexDirection: 'column',
           alignItems: 'center',
           '& > *': {
@@ -49,13 +49,12 @@ const Main = () => {
           },
         }}
       >
-        <ButtonGroup variant="outlined" aria-label="outlined button group" sx={{display:"flex",flexWrap:"wrap"}}>
+        <ButtonGroup variant="outlined" aria-label="outlined button group" sx={{ display: "flex", flexWrap: "wrap" }}>
           <Link to="/checkboxes"><Button>Checkbox</Button></Link>
           <Link to="/video"><Button>Video Player</Button></Link>
           <Link to="/tabs">  <Button>Tabs</Button></Link>
-          <Button>upcoming component</Button>
+          <Link to="/react-datepicker"> <Button>React Datepicker</Button></Link>
         </ButtonGroup>
-
       </Box>
     </>
   )

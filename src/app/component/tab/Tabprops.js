@@ -11,14 +11,13 @@ const Tabprops = () => {
         icon3: <PersonPinIcon />
     }
     const labels = {
-        label1: "Tab1",
+        label1: 5,
         label2: "Tab2",
         label3: "Tab3"
     }
     const textcolors = {
         textcolor1: "primary",
         textcolor2: "secondary",
-
     }
     const indicatorcolors = {
         indicatorcolor1: "primary",
