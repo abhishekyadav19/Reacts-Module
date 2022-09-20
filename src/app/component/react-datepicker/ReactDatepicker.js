@@ -8,7 +8,7 @@ import "../../../assests/css/common.css"
 
 const ReactDatepicker = () => {
 const [startDate, setStartDate] = useState(new Date())
-const [endDate, setEndDate] = useState()
+const [endDate, setEndDate] = useState(addDays(new Date(), 1))
 
 
     return (
@@ -28,10 +28,10 @@ const [endDate, setEndDate] = useState()
                             </Grid>
                             <Grid item xs={12}>
                                 To : <DatePicker 
-                                selected={addDays(new Date(), 1)}
+                                selected={endDate}
                                 onChange={(e)=>setEndDate(e)}
-                                maxDate={addDays(new Date(), 10)}
-                                minDate={addDays(new Date(), 1)}
+                                endDate={addDays(new Date(), 10)}
+                                startDate={addDays(new Date(), 1)}
                                 showWeekNumbers
                                 />
                             </Grid>

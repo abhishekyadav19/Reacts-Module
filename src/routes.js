@@ -10,6 +10,14 @@ const Video = lazy(() => import('./app/component/video/Video'));
 const Checkboxes = lazy(() => import('./app/component/checkbox/Checkboxes'));
 const Tabprops = lazy(() => import('./app/component/tab/Tabprops'));
 const ReactDatepicker = lazy(() => import('./app/component/react-datepicker/ReactDatepicker'));
+const LoaderProps = lazy(() => import('./app/component/loader/LoaderProps'));
+const MapContainer = lazy(() => import('./app/component/google-map/MapContainer'));
+const Callbackhook = lazy(() => import('./app/component/use-callback/Callbackhook'));
+const Memo = lazy(() => import('./app/component/memo/Memo'));
+const Autocomplete = lazy(() => import('./app/component/google-map/Autocomplete'));
+const ImageUpload = lazy(() => import('./app/component/image-preview/ImageUpload'));
+
+
 
 
 const routes = [
@@ -21,7 +29,14 @@ const routes = [
     { path: '/video', name: "video", component: Video },
     { path: '/tabs', name: "TabProps", component: Tabprops },
     { path: '/react-datepicker', name: "react-datepicker", component: ReactDatepicker },
-  
+    { path: '/loader', name: "loader", component: LoaderProps },
+    { path: '/google-map', name: "googlemap", component: MapContainer },
+    { path: '/use-callbackhook', name: "usecallback", component:Callbackhook },
+    { path: '/use-memo', name: "usememo", component:Memo },
+    { path: '/autocomplete', name: "autocomplete", component:Autocomplete },
+    { path: '/image-preview', name: "image-preview", component:ImageUpload },
+
+
 ]
 
 export default routes;

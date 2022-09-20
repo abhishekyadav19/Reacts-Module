@@ -1,0 +1,42 @@
+.preview-bx{
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    border: 2px solid #757575;
+    border-radius: 50%;
+}
+.images{
+    position: absolute;
+    bottom: 13px;
+    right: -8px;
+    padding: 7px;
+    background-color: #dfd7d7;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.username{
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50%;
+}
+.close-icon svg{
+    padding: 5px;
+    background-color: red;
+    color: #fff;
+    font-size: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.close-icon{
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.preview-wrapper{
+    margin-bottom: 2rem;
+}
+.fullimg{
+    width: 45%;
+    height: 100%;
+    margin: 0 auto;
+}

@@ -15,19 +15,20 @@ const DefaultLayout = lazy(() => import('./app/layouts/Layout'))
 const Login = lazy(() => import('./app/authentication/login/Login'));
 const Register = lazy(() => import('./app/authentication/ragister/Ragister'));
 
-const App=()=> {
-  
-    return (
-      <BrowserRouter>
-        <Suspense fallback={loading}>
-          <Routes>
-            <Route path="*"  element={<DefaultLayout/>} />
-            <Route path="/login" element={ <Login/>} />
-            <Route path="/ragister" element={ <Register/>}/>
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    ) 
+
+const App = () => {
+
+  return (
+    <BrowserRouter>
+      <Suspense fallback={loading}>
+        <Routes>
+          <Route path="*" element={<DefaultLayout />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/ragister" element={<Register />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
+  )
 }
 
 export default App
