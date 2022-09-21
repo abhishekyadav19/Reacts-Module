@@ -15,6 +15,8 @@ const ImageUpload = () => {
             validationSchema={yup.object({
                 files: yup.mixed().nullable().required("This field is required")
                     .test("FILE_SIZE", "Upload file is too big", (value) => !value || (value && value.size <= 1024 * 1024))
+                    .test("FILE_SIZE", "Upload file is too small", (value) => !value || (value && value.size >= 100 * 100))
+
             })}
             onSubmit={(values) => {
                 console.log(values);
