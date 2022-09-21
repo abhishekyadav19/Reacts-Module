@@ -27,7 +27,7 @@ const UploadPreview = ({ image }) => {
     };
     return (
         <>
-            <img src={preview} className='username' onClick={handleClickOpen} alt="upload-preview"/>
+            <img src={preview} className='username' onClick={handleClickOpen} alt="upload-preview" />
             <div>
                 <Dialog
                     fullScreen
@@ -47,7 +47,7 @@ const UploadPreview = ({ image }) => {
 
                         </Toolbar>
                     </AppBar>
-                    <img src={preview} className='fullimg' onClick={handleClickOpen} alt="upload-preview"/>
+                    <img src={preview} className='fullimg' onClick={handleClickOpen} alt="upload-preview" />
                 </Dialog>
             </div>
         </>
