@@ -5,8 +5,8 @@ This component provides a simple react component, which enables the user to have
 - npm install custom-image-loader
 
 ## Files Directory:
-/src/app/component/loader/Loader.jsx
-/src/app/component/loader/LoaderProps.jsx
+- /src/app/component/loader/Loader.jsx
+- /src/app/component/loader/LoaderProps.jsx
 
 ## Options
 - image (*): Should specify the URL or the path from the local system.
