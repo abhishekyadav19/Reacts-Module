@@ -16,7 +16,7 @@ const Callbackhook = lazy(() => import('./app/component/use-callback/Callbackhoo
 const Memo = lazy(() => import('./app/component/memo/Memo'));
 const Autocomplete = lazy(() => import('./app/component/google-map/Autocomplete'));
 const ImageUpload = lazy(() => import('./app/component/image-preview/ImageUpload'));
-const VideoPlayer = lazy(() => import('./app/component/test/VideoPlayer'));
+// const VideoPlayer = lazy(() => import('./app/component/test/VideoPlayer'));
 
 
 
@@ -37,8 +37,9 @@ const routes = [
     { path: '/use-memo', name: "usememo", component: Memo },
     { path: '/autocomplete', name: "autocomplete", component: Autocomplete },
     { path: '/image-preview', name: "image-preview", component: ImageUpload },
-    { path: '/videoplayer', name: "VideoPlayer", component: VideoPlayer },
+    // { path: '/videoplayer', name: "VideoPlayer", component: VideoPlayer },
 
 ]
 
 export default routes;
+

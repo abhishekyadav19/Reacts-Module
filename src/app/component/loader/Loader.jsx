@@ -8,7 +8,7 @@ const Loader = ({ image }) => {
             <CustomImageLoader
                 image={image}
                 isLoaded={true}
-                circle={false}
+                circle={true}
                 speed={2}
                 animationType={'spin'}
             />
@@ -18,5 +18,5 @@ const Loader = ({ image }) => {
 export default Loader
 
 Loader.defaultProps = {
-    image:"https://loremflickr.com/320/240",
+    image: "https://loremflickr.com/320/240",
 };

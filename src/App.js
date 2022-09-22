@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login2 from './app/component/test2/Login2';
 
 
 const loading = (
@@ -25,6 +26,8 @@ const App = () => {
           <Route path="*" element={<DefaultLayout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/ragister" element={<Register />} />
+          <Route path="/login2" element={<Login2 />} />
+
         </Routes>
       </Suspense>
     </BrowserRouter>
