@@ -6,7 +6,6 @@ const CheckboxProps = () => {
         color1: "success",
         color2: "warning",
         color3: "primary",
-        color4: "secondary"
     }
     return (
         <div>
